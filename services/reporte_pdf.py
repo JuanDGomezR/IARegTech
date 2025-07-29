@@ -12,7 +12,7 @@ def generar_pdf(sistema, evaluaciones, certificacion):
 
     # Encabezado
     c.setFont("Helvetica-Bold", 16)
-    c.drawString(50, 770, "📄 Informe de Evaluación Ética – Registro Manual")
+    c.drawString(50, 770, "Informe de Evaluación Ética – Registro Manual")
     c.setFont("Helvetica", 11)
     c.drawString(50, 755, f"Fecha de generación: {datetime.date.today().strftime('%d/%m/%Y')}")
 
@@ -31,7 +31,7 @@ def generar_pdf(sistema, evaluaciones, certificacion):
 
     # Evaluación ética
     c.setFont("Helvetica-Bold", 12)
-    c.drawString(50, y, "🧠 Evaluación Ética:")
+    c.drawString(50, y, "Evaluación Ética:")
     y -= 18
     c.setFont("Helvetica", 11)
     for ev in evaluaciones:
@@ -45,7 +45,7 @@ def generar_pdf(sistema, evaluaciones, certificacion):
 
     # Certificación
     c.setFont("Helvetica-Bold", 12)
-    c.drawString(50, y, "📌 Certificación:")
+    c.drawString(50, y, "Certificación:")
     y -= 18
     c.setFont("Helvetica", 11)
     c.drawString(60, y, f"Nivel: {certificacion['nivel']}")
@@ -63,7 +63,7 @@ def generar_pdf_analisis(nombre_archivo, resultado, evaluaciones, riesgo, certif
 
     # Título
     c.setFont("Helvetica-Bold", 16)
-    c.drawString(50, 770, "📄 Informe Ético de Análisis de Código")
+    c.drawString(50, 770, "Informe Ético de Análisis de Código")
     c.setFont("Helvetica", 11)
     c.drawString(50, 755, f"Archivo analizado: {nombre_archivo}")
     c.drawString(50, 740, f"Fecha: {datetime.date.today().strftime('%d/%m/%Y')}")
@@ -72,7 +72,7 @@ def generar_pdf_analisis(nombre_archivo, resultado, evaluaciones, riesgo, certif
 
     # Indicadores técnicos
     c.setFont("Helvetica-Bold", 12)
-    c.drawString(50, y, "🔍 Indicadores técnicos detectados:")
+    c.drawString(50, y, "Indicadores técnicos detectados:")
     y -= 20
     c.setFont("Helvetica", 11)
     for k, v in resultado.items():
@@ -82,7 +82,7 @@ def generar_pdf_analisis(nombre_archivo, resultado, evaluaciones, riesgo, certif
 
     y -= 15
     c.setFont("Helvetica-Bold", 12)
-    c.drawString(50, y, "🧠 Evaluación Ética:")
+    c.drawString(50, y, "Evaluación Ética:")
     y -= 20
     c.setFont("Helvetica", 11)
     for ev in evaluaciones:
@@ -96,14 +96,14 @@ def generar_pdf_analisis(nombre_archivo, resultado, evaluaciones, riesgo, certif
 
     y -= 10
     c.setFont("Helvetica-Bold", 12)
-    c.drawString(50, y, "📊 Clasificación de riesgo:")
+    c.drawString(50, y, "Clasificación de riesgo:")
     y -= 16
     c.setFont("Helvetica", 11)
     c.drawString(60, y, f"Nivel de riesgo detectado: {riesgo}")
 
     y -= 20
     c.setFont("Helvetica-Bold", 12)
-    c.drawString(50, y, "📌 Certificación:")
+    c.drawString(50, y, "Certificación:")
     y -= 16
     c.setFont("Helvetica", 11)
     c.drawString(60, y, f"Nivel: {certificacion['nivel']}")

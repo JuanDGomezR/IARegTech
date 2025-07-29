@@ -18,12 +18,13 @@
 
 **IARegTech** es un acrónimo de:
 
-- **IA**: Inteligencia Artificial  
+- **IA**: Inteligencia Artificial
 - **RegTech**: Regulatory Technology (Tecnología regulatoria)
 
 Este proyecto representa una herramienta **tecnológica de regulación y control ético aplicada al mundo de la inteligencia artificial**, permitiendo verificar que un sistema o modelo de IA cumpla criterios de transparencia, equidad y control humano.
 
 ---
+
 ## 🚀 Tecnologías utilizadas
 
 - Python 3.x
@@ -40,7 +41,8 @@ Este proyecto representa una herramienta **tecnológica de regulación y control
 ## 🛠 Instalación
 
 1. Copea en el escritorio la carpeta del proyecto
-```
+
+````
 
 2. Crea y activa un entorno virtual:
 ```bash
@@ -50,21 +52,25 @@ python -m venv venv
 
 # En Linux/Mac:
 source venv/bin/activate
-```
+````
 
 3. Instala las dependencias:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. Crea la base de datos en MySQL:
+
 ```sql
 CREATE DATABASE iaregtech;
 USE iaregtech;
 
 -- Ejecuta las sentencias SQL proporcionadas en el proyecto para crear las tablas necesarias (siempre y cuando sea necesario).
 ```
+
 5. Configura tus credenciales en `config.py`:
+
 ```python
 MYSQL_USER = 'root'
 MYSQL_PASSWORD = 'tu_contraseña'
@@ -77,17 +83,20 @@ MAIL_PASSWORD = 'tu_contraseña_app'
 ## ▶️ Uso
 
 1. Ejecuta el servidor Flask:
+
 ```bash
 python app.py
 ```
 
 2. Accede desde el navegador a:
+
 ```
 http://localhost:5000/registrar         # Para registrar un sistema manual
 http://localhost:5000/subir             # Para subir archivo de IA real
 ```
 
 3. Flujo de trabajo sugerido:
+
 - Registrar un sistema IA manualmente o subir un archivo `.py`, `.ipynb`, `.csv`, `.pkl`.
 - El sistema detecta si contiene IA, si automatiza decisiones, si usa datos sensibles y si fue generado por una IA.
 - Se realiza una evaluación ética automática basada en:
@@ -160,7 +169,7 @@ Este proyecto es de uso educativo y demostrativo. Inspirado en el Proyecto de Le
 
 ## ✉️ Contacto
 
-Para soporte o consultas: 
+Para soporte o consultas: juan.dev1809@gmail.com
 
 ---
 

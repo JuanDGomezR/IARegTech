@@ -12,7 +12,7 @@ carga_bp = Blueprint('carga', __name__)
 UPLOAD_FOLDER = 'uploads/'
 ALLOWED_EXTENSIONS = {'py', 'txt'}
 
-# ✅ Función para verificar extensión permitida
+# Función para verificar extensión permitida
 def extension_permitida(nombre_archivo):
     return '.' in nombre_archivo and nombre_archivo.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
@@ -24,9 +24,9 @@ def subir_archivo():
         nombre = form.nombre.data
         nombre_archivo = secure_filename(archivo.filename)
 
-        # ✅ Validar extensión
+        # Validar extensión
         if not extension_permitida(nombre_archivo):
-            flash("⚠️ Tipo de archivo no permitido. Solo se aceptan archivos con extensión .py y .txt", "danger")
+            flash("Tipo de archivo no permitido. Solo se aceptan archivos con extensión .py y .txt", "danger")
             return redirect(url_for('carga.subir_archivo'))
 
         ruta = os.path.join(UPLOAD_FOLDER, nombre_archivo)

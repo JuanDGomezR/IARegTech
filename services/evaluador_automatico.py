@@ -46,8 +46,6 @@ def evaluar_etica_desde_analisis(resultado_analisis):
         )
     })
 
-    # Nuevos criterios
-
     # Documentación
     evaluaciones.append({
         'criterio': 'Documentación técnica',

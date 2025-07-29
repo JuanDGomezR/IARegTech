@@ -101,8 +101,6 @@ def analizar_codigo(path_archivo):
         'automatiza_decisiones': any(p in contenido for p in PALABRAS_DECISION),
         'usa_variables_sensibles': any(p in contenido for p in PALABRAS_SENSIBLES),
         'sospecha_ia': fue_generado_por_ia(contenido),
-
-        # Nuevos criterios éticos/técnicos
         'usa_datos_sensibles_extendidos': any(p in contenido for p in PALABRAS_SENSIBLES_EXT),
         'incluye_documentacion': any(p in contenido for p in PALABRAS_DOC),
         'usa_modelos_explicables': any(p in contenido for p in PALABRAS_EXPLICABILIDAD),

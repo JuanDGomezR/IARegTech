@@ -10,7 +10,7 @@ class SistemaIA:
         self.uso_datos_personales = uso_datos_personales
         self.tipo_aprendizaje = tipo_aprendizaje
         self.nivel_intervencion_humana = nivel_intervencion_humana
-        self.id = None  # Se asignará después de guardar
+        self.id = None
 
     def guardar(self):
         cur = mysql.connection.cursor()
